@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ptRTgw0ZvLgCONhOlNBtN5jw5gMgUGdpE78xonP7fszUMJ1mf9GzjX93EbUmcrn4bTHH5vNyd/7Ul113CZEEDA==",
+  "success": true,
+  "projectFilePath": "D:\\IT\\TestTask\\TestTask.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\terna\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
