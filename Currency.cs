@@ -7,6 +7,7 @@ namespace TestTask
         public string id { get; set; }
         public int rank { get; set; }
         public string symbol { get; set; }
+        public string name { get; set; }
         public decimal supply { get; set; }
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public decimal? maxSupply { get; set; }

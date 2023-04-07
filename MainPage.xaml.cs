@@ -16,6 +16,9 @@ using System.Windows.Shapes;
 using System.IO;
 using System.Reflection;
 using System.ComponentModel;
+using System.Security.Policy;
+using System.Data.SqlTypes;
+using System.Diagnostics;
 
 namespace TestTask
 {
@@ -26,7 +29,7 @@ namespace TestTask
     /// </summary>
     public partial class MainPage : Window
     {
-        RootObject ro = new RootObject();
+        RootObject? ro = new RootObject();
         private int index = 0;
 
 
@@ -82,8 +85,8 @@ namespace TestTask
             if (ro?.data != null && ro.data.Any())
             {
                 Currency currency = ro.data[i];
-                ID.Text = currency.id;
-                Price.Text = currency.priceUsd.ToString();
+                ID.Text = currency.name;
+                Price.Text = $"{currency.priceUsd} USD";
                 Tag.Text = currency.symbol;
                 Rank.Text = currency.rank.ToString();
             }
@@ -108,6 +111,15 @@ namespace TestTask
         private async void refresh_Click(object sender, RoutedEventArgs e)
         {
             await LoadData();
+        }
+
+        private void ButtonURL_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = "cmd",
+                Arguments = $"/c start {ro.data[index].explorer}"
+            });
         }
     }
 }
