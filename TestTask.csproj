@@ -8,7 +8,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="src\btnInfo.jpg" />
+    <None Remove="src\mainpage.jpg" />
+    <None Remove="src\Menu.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="src\btnInfo.jpg" />
+    <Resource Include="src\mainpage.jpg" />
+    <Resource Include="src\Menu.jpg" />
   </ItemGroup>
 
 </Project>

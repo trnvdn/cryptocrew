@@ -18,18 +18,25 @@ namespace TestTask
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public  partial class MainWindow : Window
     {
+        private APIrequests api = new APIrequests();
         public MainWindow()
         {
             InitializeComponent();
+            InitializeAsync();
         }
 
+        public async Task InitializeAsync()
+        {
+            await api.LoadData();
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var newWindow = new MainPage();
+            var newWindow = new Home();
             newWindow.Show();
             Close();
         }
+        
     }
 }

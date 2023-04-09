@@ -19,7 +19,7 @@ D:\IT\TestTask\obj\Debug\net7.0-windows\refint\TestTask.dll
 D:\IT\TestTask\obj\Debug\net7.0-windows\TestTask.pdb
 D:\IT\TestTask\obj\Debug\net7.0-windows\TestTask.genruntimeconfig.cache
 D:\IT\TestTask\obj\Debug\net7.0-windows\ref\TestTask.dll
-D:\IT\TestTask\obj\Debug\net7.0-windows\MainPage.g.cs
-D:\IT\TestTask\obj\Debug\net7.0-windows\MainPage.baml
 D:\IT\TestTask\bin\Debug\net7.0-windows\Newtonsoft.Json.dll
 D:\IT\TestTask\obj\Debug\net7.0-windows\TestTask.csproj.CopyComplete
+D:\IT\TestTask\obj\Debug\net7.0-windows\Home.g.cs
+D:\IT\TestTask\obj\Debug\net7.0-windows\Home.baml

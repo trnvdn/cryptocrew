@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="400" Width="800" WindowStartupLocation="CenterScreen">
     <Grid InputScope="Srgs">
-        <TextBox HorizontalAlignment="Center" Height="74" Margin="0,60,0,0" TextWrapping="Wrap" Text="WELCOME" VerticalAlignment="Top" Width="234" FontSize="48"/>
+        <TextBlock HorizontalAlignment="Center" Height="74" Margin="0,60,0,0" TextWrapping="Wrap" Text="WELCOME" VerticalAlignment="Top" Width="234" FontSize="48"/>
         <Button Content="CONTINUE" HorizontalAlignment="Center" Height="71" Margin="0,253,0,0" VerticalAlignment="Top" Width="264" FontSize="48" Click="Button_Click"/>
 
     </Grid>
