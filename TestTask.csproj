@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <None Remove="src\btnInfo.jpg" />
+    <None Remove="src\Details.jpg" />
     <None Remove="src\mainpage.jpg" />
     <None Remove="src\Menu.jpg" />
   </ItemGroup>
@@ -19,6 +20,7 @@
 
   <ItemGroup>
     <Resource Include="src\btnInfo.jpg" />
+    <Resource Include="src\Details.jpg" />
     <Resource Include="src\mainpage.jpg" />
     <Resource Include="src\Menu.jpg" />
   </ItemGroup>

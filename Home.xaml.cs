@@ -23,104 +23,88 @@ namespace TestTask
 {
     public partial class Home : Window
     {
-        RootObject? ro = new RootObject();
+        private APIrequests API = new APIrequests();
+        private Currency cur = new Currency();
         private int index = 0;
+        public int MaxIndex = 100;
 
 
-        public Home()
+        public Home(int indx)
         {
+            index = indx;
             InitializeComponent();
-            LoadData();
+            cur = API.GetCurrentCurrency(index);
+            Initialize();
         }
-
-        private async Task LoadData()
+        private void Initialize()
         {
-            string url = "http://api.coincap.io/v2/assets";
-            HttpClient client = new HttpClient();
-
-            try
+            Currency currency = API.GetCurrentCurrency(index);
+            Currency.Text = currency.name;
+            Price.Text = currency.priceUsd.ToString() + " USD";
+            Code.Text = currency.symbol;
+            Rank.Text = currency.rank.ToString();
+            if (currency.changePercent24Hr > 0)
             {
-                HttpResponseMessage response = await client.GetAsync(url);
-
-                if (response.IsSuccessStatusCode)
-                {
-                    string responseData = await response.Content.ReadAsStringAsync();
-
-                    File.WriteAllText("storage.json", responseData);
-
-                    string json = File.ReadAllText("storage.json");
-                    ro = JsonConvert.DeserializeObject<RootObject>(json);
-
-                    Initialize(index);
-                }
-                else
-                {
-                    MessageBox.Show($"An error occurred while retrieving data: {response.ReasonPhrase}");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred while retrieving data: {ex.Message}");
-            }
-        }
-
-
-        private void Initialize(int i)
-        {
-            if (ro?.data != null && ro.data.Any())
-            {
-                Currency currency = ro.data[i];
-                Currency.Text = currency.id;
-                Price.Text = currency.priceUsd.ToString();
-                Code.Text = currency.symbol;
-                Rank.Text = currency.rank.ToString();
-                СhangePercent.Text = currency.changePercent24Hr.ToString();
+                СhangePercent.Foreground = new SolidColorBrush(Colors.Green);
+                СhangePercent.Text = currency.changePercent24Hr.ToString() + "%   ↑↑↑";
             }
             else
             {
-                MessageBox.Show("No data to display.");
+                СhangePercent.Foreground = new SolidColorBrush(Colors.Crimson);
+                СhangePercent.Text = currency.changePercent24Hr.ToString() + "%   ↓↓↓";
             }
         }
         
         private void decrease_Click(object sender, RoutedEventArgs e)
         {
-            index = index == 0 ? ro.data.Count - 1 : index - 1;
-            Initialize(index);
+            index = index == 0 ? MaxIndex - 1 : index - 1;
+            Initialize();
         }
 
         private void Increase_Click(object sender, RoutedEventArgs e)
         {
-            index = index == ro?.data.Count - 1 ? 0 : index + 1;
-            Initialize(index);
+            index = index == MaxIndex - 1 ? 0 : index + 1;
+            Initialize();
         }
 
         private async void refresh_Click(object sender, RoutedEventArgs e)
         {
-            await LoadData();
+            await API.LoadData();
+            Initialize();
         }
 
         private void Link_Click(object sender, RoutedEventArgs e)
         {
-            Process.Start(new ProcessStartInfo
-            {
-                FileName = "cmd",
-                Arguments = $"/c start {ro?.data[index].explorer}"
-            });
+            ButtonsHandler.LinkButton(API.GetCurrentCurrency(index).explorer,this.WindowState);
         }
 
         private void Menu1_Click(object sender, RoutedEventArgs e)
         {
-            MenuJPEG.Visibility = Visibility.Visible;
-            MenuInside.Visibility = Visibility.Visible;
-            Menu.Visibility = Visibility.Collapsed;
+            ButtonsHandler.MenuClick(this.MenuGrid, this.Menu);
         }
 
         private void MenuInside_Click(object sender, RoutedEventArgs e)
         {
-            MainJPG.Visibility = Visibility.Visible;
-            MenuJPEG.Visibility = Visibility.Collapsed;
-            Menu.Visibility = Visibility.Visible;
-            MenuInside.Visibility = Visibility.Collapsed;
+            ButtonsHandler.MenuClick(this.MenuGrid, this.Menu);
+        }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void Details_Click(object sender, RoutedEventArgs e)
+        {
+            Details dt = new Details(index,MaxIndex);
+            dt.Show();
+            Close();
+        }
+        private void Home_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Escape)
+            {
+                Menu1_Click(sender, e);
+            }
         }
     }
 }

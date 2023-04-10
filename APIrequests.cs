@@ -13,22 +13,26 @@ namespace TestTask
 {
     internal class APIrequests
     {
-            RootObject ro = new RootObject();
+        public int ProgressBarCount = 0;
             public async Task LoadData()
             {
-                const string url = "https://api.coincap.io/v2/assets";
+                string url = "http://api.coincap.io/v2/assets";
                 HttpClient client = new HttpClient();
-
                 try
                 {
                     HttpResponseMessage response = await client.GetAsync(url);
-
                     if (response.IsSuccessStatusCode)
                     {
                         string responseData = await response.Content.ReadAsStringAsync();
-                        ro = JsonConvert.DeserializeObject<RootObject>(responseData);
+                        if (!File.Exists("storage.json"))
+                        {
+                            File.Create("storage.json");
+                        }
                         File.WriteAllText("storage.json", responseData);
-                        Update();
+                        while(ProgressBarCount != 100)
+                        {
+                            ProgressBarCount++;
+                        }
                     }
                     else
                     {
@@ -40,25 +44,15 @@ namespace TestTask
                     MessageBox.Show($"An error occurred while retrieving data: {ex.Message}");
                 }
             }
-
-        public async void Update()
-        {
-            if (File.Exists("storage.json"))
-            {
-                await LoadData();
+            private RootObject GetData()
+            { 
                 string json = File.ReadAllText("storage.json");
-                ro = JsonConvert.DeserializeObject<RootObject>(json);
-                /*Initialize(index);*/
+                return JsonConvert.DeserializeObject<RootObject>(json); 
             }
-            else
-            {
-                MessageBox.Show("ERROR.FILE ISN`T FINDED");
-            }
-        }
-        public RootObject ReturnCurrentData()
+            public Currency GetCurrentCurrency(int index)
         {
-            Update();
-            return ro;
+            return GetData().data[index];
         }
+            
     }
 }

@@ -23,3 +23,5 @@ D:\IT\TestTask\bin\Debug\net7.0-windows\Newtonsoft.Json.dll
 D:\IT\TestTask\obj\Debug\net7.0-windows\TestTask.csproj.CopyComplete
 D:\IT\TestTask\obj\Debug\net7.0-windows\Home.g.cs
 D:\IT\TestTask\obj\Debug\net7.0-windows\Home.baml
+D:\IT\TestTask\obj\Debug\net7.0-windows\Details.g.cs
+D:\IT\TestTask\obj\Debug\net7.0-windows\Details.baml
