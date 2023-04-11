@@ -5,6 +5,7 @@
     <TargetFramework>net7.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <UseWindowsForms>False</UseWindowsForms>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,10 +13,13 @@
     <None Remove="src\Details.jpg" />
     <None Remove="src\mainpage.jpg" />
     <None Remove="src\Menu.jpg" />
+    <None Remove="src\Search.jpg" />
+    <None Remove="src\SearchMenu.jpg" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+	  <PackageReference Include="LiveCharts.Wpf" Version="0.9.7" />
+	  <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,6 +27,20 @@
     <Resource Include="src\Details.jpg" />
     <Resource Include="src\mainpage.jpg" />
     <Resource Include="src\Menu.jpg" />
+    <Resource Include="src\Search.jpg" />
+    <Resource Include="src\SearchMenu.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Windows\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <XamlRuntime>Wpf</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
 
 </Project>
