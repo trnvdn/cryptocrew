@@ -24,10 +24,10 @@ D:\IT\TestTask\obj\Debug\net7.0-windows\ref\TestTask.dll
 D:\IT\TestTask\obj\Debug\net7.0-windows\Windows\Details.g.cs
 D:\IT\TestTask\obj\Debug\net7.0-windows\Windows\Home.g.cs
 D:\IT\TestTask\obj\Debug\net7.0-windows\Windows\Search.g.cs
-D:\IT\TestTask\obj\Debug\net7.0-windows\ChartW.baml
-D:\IT\TestTask\obj\Debug\net7.0-windows\ChartW.g.cs
 D:\IT\TestTask\bin\Debug\net7.0-windows\LiveCharts.dll
 D:\IT\TestTask\bin\Debug\net7.0-windows\LiveCharts.Wpf.dll
 D:\IT\TestTask\obj\Debug\net7.0-windows\Windows\Details.baml
 D:\IT\TestTask\obj\Debug\net7.0-windows\Windows\Home.baml
 D:\IT\TestTask\obj\Debug\net7.0-windows\Windows\Search.baml
+D:\IT\TestTask\obj\Debug\net7.0-windows\ChartWindow.g.cs
+D:\IT\TestTask\obj\Debug\net7.0-windows\ChartWindow.baml

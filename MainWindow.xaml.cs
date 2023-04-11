@@ -22,6 +22,8 @@ namespace TestTask
     /// </summary>
     public  partial class MainWindow : Window
     {
+        const string FilePath = "storage.json";
+        const string link = "http://api.coincap.io/v2/assets";
         private APIrequests api = new APIrequests();
         public MainWindow()
         {
@@ -31,7 +33,7 @@ namespace TestTask
         
         public async Task InitializeAsync()
         {
-            await api.LoadData();
+            await api.LoadData(link,FilePath);
             var newWindow = new Home(0);
             newWindow.Show();
             Close();
