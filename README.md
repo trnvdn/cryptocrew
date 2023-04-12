@@ -6,6 +6,7 @@ CRYPTOCREW is a simple cryptocurrency tracking application that allows you to vi
 The application is built using C# and the WPF framework, with data pulled from the CoinCap API.
 
 Features:
+
 🟢 Real-time price updates for various cryptocurrencies
 
 ![image](https://user-images.githubusercontent.com/91062667/231395789-afa0652a-b1d8-4dd9-993d-605707d82215.png)
