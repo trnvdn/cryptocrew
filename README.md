@@ -24,25 +24,36 @@ Usage:
 Upon launching the application, you will see a list of popular cryptocurrencies. Clicking on a cryptocurrency will take you to a detailed view that includes real-time price updates, as well as statistics and price history.
 
 Hotkeys for application management:
+
 ✱ ESC/Tab – menu
+
 ✱ Next most popular cryptocurrency            →
+
 ✱ Previous most popular cryptocurrency        ←
+
 ✱ Go to the page with a detailed description  ↑
+
 ✱ Go to the marketplace by link               ↓
+
 ✱ Go to the most popular cryptocurrency in the current selection          ctrl + ←
+
 ✱ Go to the last cryptocurrency in the current selection                  ctrl + →
 
-<p>
 Stack:
+
 ✱ C#
+
 ✱ WPF
+
 ✱ CoinCap API
+
 ✱ LiveChart
-</p>
 
 
 Contributions are always welcome! If you would like to contribute to CryptoCrew, please clone this repository and submit a pull request with your changes.
 
 Author :
+
 ✱ Ternovyi Daniil ✱
+
 trnvdn / [multyhex](https://github.com/multyhex/)
