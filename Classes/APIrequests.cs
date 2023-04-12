@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.IO.Pipes;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -28,7 +29,8 @@ namespace TestTask
                     string responseData = await response.Content.ReadAsStringAsync();
                     if (!File.Exists(file))
                     {
-                        File.Create(file);
+                        var fileStream = File.Create(file);
+                        fileStream.Close();
                     }
                     File.WriteAllText(file, responseData);
                 }
