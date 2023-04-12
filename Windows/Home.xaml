@@ -9,12 +9,13 @@
     <Grid Width="1920" Height="1080">
         <Image x:Name="MainJPG" Source="/src/mainpage.jpg" Visibility="Visible" Margin="0,-9,0,9"/>
 
-        <Button x:Name="decrease" HorizontalAlignment="Left" Height="118" Margin="176,0,0,0" VerticalAlignment="Center" Width="98" Opacity="0" Click="Decrease_Click"/>
-        <Button x:Name="Increase" HorizontalAlignment="Left" Height="118" Margin="1644,0,0,0" VerticalAlignment="Center" Width="98" Opacity="0" Click="Increase_Click"/>
-        <Button x:Name="Details" HorizontalAlignment="Left" Height="188" Margin="606,779,0,0" VerticalAlignment="Top" Width="222" Opacity="0" Click="Details_Click"/>
-        <Button x:Name="Link" HorizontalAlignment="Center" Height="188" Margin="0,779,0,0" VerticalAlignment="Top" Width="214" Opacity="0" Click="Link_Click"/>
-        <Button x:Name="Refresh" HorizontalAlignment="Left" Height="188" Margin="1105,779,0,0" VerticalAlignment="Top" Width="221" Opacity="0" Click="refresh_Click"/>
-        <Button x:Name="Menu" HorizontalAlignment="Left" Height="88" Margin="14,109,0,0" VerticalAlignment="Top" Width="88" Opacity="0" Click="Menu1_Click"/>
+        <Button x:Name="decrease" Focusable="False" HorizontalAlignment="Left" Height="118" Margin="176,0,0,0" VerticalAlignment="Center" Width="98" Opacity="0" Click="Decrease_Click"/>
+        <Button x:Name="Increase" Focusable="False" HorizontalAlignment="Left" Height="118" Margin="1644,0,0,0" VerticalAlignment="Center" Width="98" Opacity="0" Click="Increase_Click"/>
+        <Button x:Name="Details" Focusable="False" HorizontalAlignment="Left" Height="188" Margin="606,779,0,0" VerticalAlignment="Top" Width="222" Opacity="0" Click="Details_Click"/>
+        <Button x:Name="Link" Focusable="False" HorizontalAlignment="Center" Height="188" Margin="0,779,0,0" VerticalAlignment="Top" Width="214" Opacity="0" Click="Link_Click"/>
+        <Button x:Name="Refresh" Focusable="False" HorizontalAlignment="Left" Height="188" Margin="1105,779,0,0" VerticalAlignment="Top" Width="221" Opacity="0" Click="refresh_Click"/>
+        <Button x:Name="Menu" Focusable="False" HorizontalAlignment="Left" Height="88" Margin="14,109,0,0" VerticalAlignment="Top" Width="88" Opacity="0" Click="Menu1_Click"/>
+        <Button x:Name="FilterB" Focusable="False" HorizontalAlignment="Left" Height="88" Margin="1626,186,0,0" VerticalAlignment="Top" Width="88" Opacity="0" Click="FilterB_Click"/>
         <TextBlock x:Name="Rank" HorizontalAlignment="Left" Height="90" Margin="160,195,0,-10" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" FontSize="48" TextAlignment="Center"><Run Language="en-gb"/></TextBlock>
         <TextBlock x:Name="Code" HorizontalAlignment="Center" Height="88" Margin="0,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1056" FontSize="48" TextAlignment="Center"><Run Language="en-gb"/></TextBlock>
         <TextBlock x:Name="Currency" HorizontalAlignment="Center" Height="84" Margin="0,325,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1056" FontSize="48" TextAlignment="Center"><Run Language="en-gb"/></TextBlock>
@@ -22,10 +23,17 @@
         <TextBlock x:Name="СhangePercent" HorizontalAlignment="Center" Height="96" TextWrapping="Wrap" VerticalAlignment="Top" Width="1056" FontSize="48" TextAlignment="Center" Margin="0,678,0,0"><Run Language="en-gb"/></TextBlock>
         <Grid x:Name="MenuGrid" Visibility="Collapsed">
             <Image x:Name="MenuJPEG" Source="/src/Menu.jpg" Margin="-10,-30,1,1"/>
-            <Button x:Name="MenuInside" HorizontalAlignment="Left" Height="119" Margin="598,215,0,0" VerticalAlignment="Top" Width="120" Opacity="0" Click="MenuInside_Click"/>
-            <Button x:Name="Exit" HorizontalAlignment="Left" Height="119" Margin="600,632,0,0" VerticalAlignment="Top" Width="120" Opacity="0" Click="Exit_Click"/>
-            <Button x:Name="Search" HorizontalAlignment="Left" Height="128" Margin="600,421,0,0" VerticalAlignment="Top" Width="120" Opacity="0" Click="Search_Click"/>
+            <Button x:Name="MenuInside" Focusable="False" HorizontalAlignment="Left" Height="119" Margin="598,215,0,0" VerticalAlignment="Top" Width="120" Opacity="0" Click="MenuInside_Click"/>
+            <Button x:Name="Exit" Focusable="False" HorizontalAlignment="Left" Height="119" Margin="600,632,0,0" VerticalAlignment="Top" Width="120" Opacity="0" Click="Exit_Click"/>
+            <Button x:Name="Search" Focusable="False" HorizontalAlignment="Left" Height="128" Margin="600,421,0,0" VerticalAlignment="Top" Width="120" Opacity="0" Click="Search_Click"/>
         </Grid>
+        <Grid x:Name="Filter" Visibility="Collapsed">
+            <Rectangle Focusable="False" HorizontalAlignment="Center" Height="310" Margin="0,325,0,0" VerticalAlignment="Top" Width="1358" Fill="#FFB9B2B2"/>
+            <TextBox x:Name="ValueInput" HorizontalAlignment="Center" Margin="0,444,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="87" Width="900" Background="#FF675555" FontSize="50" TextAlignment="Center"/>
+            <TextBlock Focusable="False" HorizontalAlignment="Center" Height="74" Margin="0,350,0,0" TextWrapping="Wrap" Text="Cryptocurrency amount" VerticalAlignment="Top" Width="900" FontSize="48" TextAlignment="Center"/>
+            <Button x:Name="OKButton" HorizontalAlignment="Center" Height="65" Margin="0,555,0,0" VerticalAlignment="Top" Width="300" FontSize="48" Content="OK" Click="OKButton_Click"/>
+        </Grid>
+
     </Grid>
 
 </Window>

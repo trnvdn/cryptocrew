@@ -10,7 +10,7 @@
     <Grid>
         <Image Source="/src/Search.jpg" Margin="9,0,-9,0" Height="1073" VerticalAlignment="Top"/>
         <Button  Content="SrchBtn" Focusable="False"  HorizontalAlignment="Left" Height="120" Margin="1620,490,0,0" VerticalAlignment="Top" Width="104" Visibility="Visible" Opacity="0" Click="Button_Click"/>
-        <TextBox x:Name="TextInput"  HorizontalAlignment="Left" Height="62" Margin="257,517,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1358" Opacity="100" Background="{x:Null}" FontSize="40" TextChanged="TextInput_TextChanged"/>
+        <TextBox x:Name="TextInput"  HorizontalAlignment="Left" Height="62" Margin="257,517,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1358" Opacity="100" Background="{x:Null}" FontSize="40"/>
         <Button x:Name="Menu" Focusable="False"  HorizontalAlignment="Left" Height="119" Margin="10,95,0,0" VerticalAlignment="Top" Width="120" Opacity="0" Click="Menu_Click"/>
         <Grid x:Name="MenuGrid" Visibility="Collapsed">
             <Image x:Name="MenuJPEG" Source="/src/SearchMenu.jpg" Margin="-10,-30,1,1"/>

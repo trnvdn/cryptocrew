@@ -27,6 +27,15 @@
             <Button x:Name="Exit" Focusable="False"  HorizontalAlignment="Left" Height="119" Margin="600,632,0,0" VerticalAlignment="Top" Width="120" Opacity="0" Click="Exit_Click"/>
             <Button x:Name="Search" Focusable="False"  HorizontalAlignment="Left" Height="119" Margin="600,424,0,0" VerticalAlignment="Top" Width="120" Opacity="0" Click="Search_Click"/>
         </Grid>
+        <Grid x:Name="ValueForChart" Visibility="Collapsed">
+            <Rectangle Focusable="False" HorizontalAlignment="Center" Height="310" Margin="0,325,0,0" VerticalAlignment="Top" Width="1358" Fill="#FFB9B2B2"/>
+            <TextBlock Focusable="False" HorizontalAlignment="Left" Height="74" Margin="451,365,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="48" TextAlignment="Center" Text="From"/>
+            <TextBlock Focusable="False" HorizontalAlignment="Left" Height="74" Margin="1140,365,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="48" TextAlignment="Center" Text="To"/>
+            <Button x:Name="OKButton" HorizontalAlignment="Center" Height="65" Margin="0,555,0,0" VerticalAlignment="Top" Width="300" FontSize="48" Content="OK" Click="OKButton_Click"/>
+            <DatePicker x:Name="Start" HorizontalAlignment="Left" Margin="414,467,0,0" VerticalAlignment="Top" Height="48" Width="433" FontSize="30"   DisplayDateEnd="{Binding EndDate}"/>
+            <DatePicker x:Name="End" HorizontalAlignment="Left" Margin="1074,467,0,0" VerticalAlignment="Top" Height="48" Width="433" FontSize="30"    DisplayDateEnd="{Binding EndDate}"/>
+            <Button x:Name="CloseForm" Content="X" HorizontalAlignment="Left" Margin="1581,325,0,0" VerticalAlignment="Top" Height="53" Width="58" FontSize="40" FontWeight="Bold" Background="{x:Null}" BorderBrush="{x:Null}" Click="CloseForm_Click"/>
+        </Grid>
     </Grid>
-    
+
 </Window>

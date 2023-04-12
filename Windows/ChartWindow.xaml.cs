@@ -49,7 +49,7 @@ namespace TestTask
                     }
                 };
                 Labels = correctValues.Select(x => x.date.ToString("f")).ToArray();
-                YFormatter = value => value.ToString("C");
+                YFormatter = value => value.ToString("N2") + "$";
                 DataContext = this;
             };
         }

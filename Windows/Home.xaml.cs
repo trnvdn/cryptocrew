@@ -29,6 +29,7 @@ namespace TestTask
         private int index = 0;
         public int MaxIndex = 100;
         const string FilePath = "storage.json";
+        bool FilterState = false;
 
 
         public Home(int indx)
@@ -40,6 +41,10 @@ namespace TestTask
         }
         private void Initialize()
         {
+            if(index >= MaxIndex)
+            {
+                index = MaxIndex - 1;
+            }
             Currency currency = API.GetCurrentCurrency(FilePath, index);
             Currency.Text = currency.name;
             Price.Text = currency.priceUsd.ToString() + " USD";
@@ -139,6 +144,41 @@ namespace TestTask
         {
             ButtonsHandler.Search_Click(index);
             Close();
+        }
+
+        private void OKButton_Click(object sender, RoutedEventArgs e)
+        {
+            if(int.TryParse(ValueInput.Text,out int v))
+            {
+                if(v <= 100 && v >= 1)
+                {
+                    MaxIndex = v;
+                    this.Filter.Visibility = Visibility.Collapsed;
+                    Initialize();
+                }
+                else
+                {
+                    MessageBox.Show("The maximum value is 100.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("The input number should be an integer.");
+            }
+
+        }
+
+        private void FilterB_Click(object sender, RoutedEventArgs e)
+        {
+            if(FilterState == false)
+            {
+                this.Filter.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                this.Filter.Visibility = Visibility.Collapsed;
+            }
+            FilterState = !FilterState;
         }
     }
 }

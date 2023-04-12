@@ -74,9 +74,10 @@ namespace TestTask
         }
         private void Details_PreviewKeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.Escape)
+            if (e.Key == Key.Escape || e.Key == Key.Tab)
             {
                 Menu1_Click(sender, e);
+                this.ValueForChart.Visibility = Visibility.Collapsed;
             }
             if (e.Key == Key.Left)
             {
@@ -122,10 +123,37 @@ namespace TestTask
 
         private void Chart_Click(object sender, RoutedEventArgs e)
         {
-            var localDate = DateTime.Now;
-            ChartWindow cw = new ChartWindow(cur.id,localDate.AddDays(-20), localDate,index,MaxIndex);
-            cw.Show();
-            Close();
+            ValueForChart.Visibility = Visibility.Visible;
+            Increase.Visibility = Visibility.Collapsed;
+            Decrease.Visibility = Visibility.Collapsed;
+        }
+        public DateTime EndDate
+        {
+            get { return DateTime.Now; }
+        }
+
+        private void OKButton_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (Start.SelectedDate.HasValue && End.SelectedDate.HasValue)
+            {
+                DateTimeOffset start = new DateTimeOffset(Start.SelectedDate.Value.ToUniversalTime());
+                DateTimeOffset end = new DateTimeOffset(End.SelectedDate.Value.ToUniversalTime());
+                ChartWindow cw = new ChartWindow(cur.id, start, end, index, MaxIndex);
+                cw.Show();
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("Error");
+            }
+        }
+
+        private void CloseForm_Click(object sender, RoutedEventArgs e)
+        {
+            ValueForChart.Visibility = Visibility.Collapsed;
+            Increase.Visibility = Visibility.Visible;
+            Decrease.Visibility = Visibility.Visible;
         }
     }
 }

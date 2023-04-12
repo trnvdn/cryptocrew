@@ -3,15 +3,12 @@
   <PropertyGroup />
   <ItemGroup />
   <ItemGroup>
-    <Compile Update="ChartWindow.xaml.cs">
+    <Compile Update="Windows\ChartWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="ChartWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="MainWindow.xaml">
+    <Page Update="Windows\ChartWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

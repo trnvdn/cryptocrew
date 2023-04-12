@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 D:\IT\TestTask\App.xaml
-5-1229571268
+51426702906
 
-13-1986632982
+131567519609
 2011580544269
-ChartWindow.xaml;MainWindow.xaml;Windows\Details.xaml;Windows\Home.xaml;Windows\Search.xaml;
+MainWindow.xaml;Windows\ChartWindow.xaml;Windows\Details.xaml;Windows\Home.xaml;Windows\Search.xaml;
 
 False
 

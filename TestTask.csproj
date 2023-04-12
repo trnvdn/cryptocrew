@@ -23,16 +23,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="src\btnInfo.jpg" />
     <Resource Include="src\Details.jpg" />
     <Resource Include="src\mainpage.jpg" />
     <Resource Include="src\Menu.jpg" />
     <Resource Include="src\Search.jpg" />
     <Resource Include="src\SearchMenu.jpg" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Windows\" />
   </ItemGroup>
 
   <ItemGroup>

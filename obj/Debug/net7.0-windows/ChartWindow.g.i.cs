@@ -54,7 +54,7 @@ namespace TestTask {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/TestTask;component/chartwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/TestTask;V1.0.0.0;component/chartwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\ChartWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
