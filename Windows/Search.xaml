@@ -6,7 +6,7 @@
         xmlns:ext="http://schemas.abtsoftware.co.uk/scichart/exampleExternals"
         xmlns:local="clr-namespace:TestTask"
         mc:Ignorable="d"
-        Title="Search" Width="1920" Height="1080" WindowState="Maximized" WindowStyle="None" Background="LightGray" PreviewKeyDown="Search_PreviewKeyDown">
+        Title="CryptoCrew" Width="1920" Height="1080" WindowState="Maximized" WindowStyle="None" Background="LightGray" PreviewKeyDown="Search_PreviewKeyDown" Icon="\src\icon.ico">
     <Grid>
         <Image Source="/src/Search.jpg" Margin="9,0,-9,0" Height="1073" VerticalAlignment="Top"/>
         <Button  Content="SrchBtn" Focusable="False"  HorizontalAlignment="Left" Height="120" Margin="1620,490,0,0" VerticalAlignment="Top" Width="104" Visibility="Visible" Opacity="0" Click="Button_Click"/>

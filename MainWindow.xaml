@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestTask"
         mc:Ignorable="d"
-        Title="MainWindow"  Width="1920" Height="1080" WindowState="Maximized" WindowStyle="None">
+    Title="CryptoCrew"  Width="1920" Height="1080" WindowState="Maximized" WindowStyle="None" Icon="\src\icon.ico">
     <Grid InputScope="Srgs">
         <TextBlock HorizontalAlignment="Center" Height="144" TextWrapping="Wrap" VerticalAlignment="Center" Width="448" FontSize="100"><Run Language="en-gb" Text="LOADING"/></TextBlock>
     </Grid>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestTask"
         mc:Ignorable="d"
-        Title="Home" Width="1920" Background="#FFD3CDCD" Height="1080" WindowState="Maximized" WindowStyle="None" PreviewKeyDown="Home_PreviewKeyDown">
+        Title="CryptoCrew" Width="1920" Background="#FFD3CDCD" Height="1080" WindowState="Maximized" WindowStyle="None" PreviewKeyDown="Home_PreviewKeyDown" Icon="\src\icon.ico">
     <Grid Width="1920" Height="1080">
         <Image x:Name="MainJPG" Source="/src/mainpage.jpg" Visibility="Visible" Margin="0,-9,0,9"/>
 

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestTask"
         mc:Ignorable="d"
-        Title="Details" Width="1920" Height="1080" WindowState="Maximized" WindowStyle="None" Background="LightGray" PreviewKeyDown="Details_PreviewKeyDown">
+        Title="CryptoCrew" Width="1920" Height="1080" WindowState="Maximized" WindowStyle="None" Background="LightGray" PreviewKeyDown="Details_PreviewKeyDown" Icon="\src\icon.ico">
     <Grid>
         <Image Source="/src/Details.jpg" Margin="9,0,-9,0" Height="1073" VerticalAlignment="Top"/>
         <Button x:Name="Menu" Focusable="False" HorizontalAlignment="Left" Height="88" Margin="29,108,0,0" VerticalAlignment="Top" Width="88" Opacity="0" Click="Menu1_Click"/>
