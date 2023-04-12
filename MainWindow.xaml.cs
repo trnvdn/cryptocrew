@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -12,22 +13,28 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace TestTask
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public  partial class MainWindow : Window
     {
+        const string FilePath = "storage.json";
+        const string link = "http://api.coincap.io/v2/assets";
+        private APIrequests api = new APIrequests();
         public MainWindow()
         {
             InitializeComponent();
+            InitializeAsync();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        
+        public async Task InitializeAsync()
         {
-            var newWindow = new MainPage();
+            await api.LoadData(link,FilePath);
+            var newWindow = new Home(0);
             newWindow.Show();
             Close();
         }
